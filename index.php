@@ -111,8 +111,8 @@
         <ul class="top">
         	<li class="tli"><img id="img" src="icon/menu-icon.png" height=50 width=50 style="cursor: pointer;"></li>
         	<li class="tli"><a class="ta" href="index.php">Home</a></li>
-        	<li class="tli"><a class="ta" href="os.php">OS</a></li>
-        	<li class="tli"><a class="ta" href="dbms.php">DBMS</a></li>
+        	<li class="tli"><a class="ta" href="os.php">Categoria 1</a></li>
+        	<li class="tli"><a class="ta" href="dbms.php">Categoria 2</a></li>
             <li class="tli"><a class="ta" href="quiz3.php">Categoria 3</a></li>
             <li class="tli"><a class="ta" href="quiz4.php">Categoria 4</a></li>
         </ul>
