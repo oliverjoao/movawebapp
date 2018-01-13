@@ -128,7 +128,8 @@ else
         	<li class="tli"><a class="ta" href="mainpage.php">Home</a></li>
         	<li class="tli"><a class="ta" href="os.php">OS</a></li>
         	<li class="tli"><a class="ta" href="dbms.php">DBMS</a></li>
-            <li class="tli"><a class="ta" href="dbms.php">DBMS</a></li>
+            <li class="tli"><a class="ta" href="quiz3.php">Categoria 3</a></li>
+            <li class="tli"><a class="ta" href="quiz4.php">Categoria 4</a></li>
         	
         </ul>
         <a class="ls" href=<?php echo $liol; ?>><?php echo $lio; ?></a>
