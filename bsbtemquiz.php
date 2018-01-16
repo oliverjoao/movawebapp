@@ -149,17 +149,17 @@ function checktime(x,ele)
 
 function score(){
 	var x=document.forms[0];
-	var points=0;
+	var pontos=0;
 	for(var i=0;i<x.length;i++)
 	{ 
 		if(x[i].checked)
 		{
 
 			if(x[i].value=="correct")
-				points=points+1;
+				pontos=pontos+1;
 		}
 	}
-	window.location ="scoreos.php?points="+points;
+	window.location ="scoreos.php?pontos="+pontos;
 }
 
 </script>
