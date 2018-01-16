@@ -132,10 +132,10 @@ function checktime(x,ele)
 	var min=parseInt(x/60);
 	var sec=parseInt(x%60);
 	element=document.getElementById("quiztime");
-	element.innerHTML ="Time left: "+min +" Mins "+ sec + " Secs ";
+	element.innerHTML ="Tempo restante: "+minutos +" Mins "+ segundos + " Secs ";
 	if(x<1)
 	{
-		window.alert("Exam is Finshed!!!");
+		window.alert("ACABOU!!!");
 		score();
 	}
 	else
@@ -165,13 +165,13 @@ function score(){
 </script>
 <div id="a">
 <div id="quiztime"></div>
-<script type="text/javascript">checktime(20,"quiztime");</script>
+<script type="text/javascript">checktime(60,"quiztime");</script>
 <form action="quizsubmit.php" id="msform" method="get" name="form" >
 	<fieldset><h3>A música criada em Brasília faroeste caboclo dura aproximadamente...</h3>
 		<input type="radio" name="q1" value="a">a. Um dia<br>
 		<input type="radio" name="q1" value="b">b. Um ano<br>
-		<input type="radio" name="q1" value="correct">c. Aproximadamente uma década<br>
-		<input type="radio" name="q1" value="d">d. Aproximadamente 10 minutos<br><br>
+		<input type="radio" name="q1" value="c">c. Aproximadamente uma década<br>
+		<input type="radio" name="q1" value="correct">d. Aproximadamente 10 minutos<br><br>
 		<input type="radio" name="q1" value="e">e. Nunca acaba<br><br>
 		<input type="button" name="next" value="Next" class="next-action-button">
 	</fieldset>
