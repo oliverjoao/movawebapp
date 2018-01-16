@@ -5,7 +5,7 @@ include("check.php");
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Score Board</title>
+        <title>Placar</title>
         <style>
         body{
             background-image: url("background/6.jpg");

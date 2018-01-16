@@ -2,7 +2,6 @@
 // Create connection
 session_start();
 include("connection.php");
-$img="icon/blank-man.png";
 if($_SERVER['REQUEST_METHOD']=='POST') 
 	{ 
 		if($_POST['pass']==$_POST['confpass']) 
@@ -24,7 +23,7 @@ if($_SERVER['REQUEST_METHOD']=='POST')
 		    } 
 		else
 			{
-				echo "Passwords do not match.";
+				echo "Senha incorreta.";
 			}
 	}
 ?>
