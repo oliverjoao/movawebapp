@@ -38,18 +38,19 @@ include("check.php")
 </head>
 <body>
 <div class="a">
-Obrigado! <img src="icon/smile.png" height="90">
+Obrigado!
 </div>
 <div class="b">
 <?php
-$point=$_REQUEST['points'];
-mysqli_query($conn,"INSERT INTO os_score (name,score) VALUES('$user_check','$point')");
+$point=$_REQUEST['pontos'];
+mysqli_query($conn,"INSERT INTO os_score (name,score) VALUES('$user_check','$ponto')");
 ?>
-Your Score for Operating System is  <?php 
+Sua pontuação na categoria: #BSB Tem foi...  
+<?php 
 $sql=mysqli_query($conn,"SELECT * FROM os_score WHERE name= '$user_check' order by s_no desc");
 $result=mysqli_fetch_array($sql,MYSQLI_ASSOC);
 echo $result["score"];
-?> Out of 25.
+?> de 33 perguntas.
 </div>
 <a href="mainpage.php" class="home"> Ir para página inicial</a>
 
