@@ -1,10 +1,9 @@
 <?php
 include('connection.php');
 include("check.php");
-$sql = mysqli_query($conn,"SELECT * FROM table_1 WHERE name='$user_check' ");
+$sql = mysqli_query($conn,"SELECT * FROM jogadores WHERE name='$user_check' ");
 $row=mysqli_fetch_array($sql,MYSQLI_ASSOC);
 $login_user=$row['name'];
-$image_name=$row['imagename'];
 ?>
 <!DOCTYPE html>
 <html>
@@ -85,7 +84,6 @@ $image_name=$row['imagename'];
     <body>
     	<div class="a">
     	<h1 >Hello, <em><?php echo $login_user;?></em><a class="hp" href="mainpage.php"><img id="img" src="icon/home-icon2.png" height=50 width=50 style="cursor: pointer;"></a></h1>
-    	<img src=<?php echo $image_name;?> height=200 width=200>
     	<a class="lo" href="logout.php" >Logout</a>
     	</div>
         <div class="quiz">

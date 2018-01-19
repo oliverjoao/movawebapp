@@ -9,8 +9,7 @@ if($_SERVER['REQUEST_METHOD']=='POST')
 				$username=$_POST['user'];
 				$email=$_POST['email']; 
 				$password=$_POST['pass']; 
-				$gender=$_POST['gender'];
-				$sql="INSERT INTO table_1/*nome da nossa futura tabela - jogadores*/ (name, email, password,gender,imagename) VALUES('$username','$email','$password','$gender','$img')"; 
+				$sql="INSERT INTO jogadores (name, email, password) VALUES('$username','$email','$password')"; 
 				if ($conn->query($sql) === TRUE) 
 					{
     					$_SESSION['name']=$username;
