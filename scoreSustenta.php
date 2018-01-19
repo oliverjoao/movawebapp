@@ -1,11 +1,10 @@
 <?php
 include("connection.php");
 include("check.php")
-
 ?>
 <html>
 <head>
-<title>Score</title>
+<title>Pontuação</title>
 <style type="text/css">
     div.a{
         font-size: 80px;
@@ -21,7 +20,7 @@ include("check.php")
     }
     a.home{
             text-decoration: none;
-            margin-left:35%;
+            margin-left: 35%;
             margin-top: 8%;
             background-color: #405d27;
             color: white;
@@ -39,22 +38,21 @@ include("check.php")
 </head>
 <body>
 <div class="a">
-Thankyou <img src="icon/smile.png" height="90">
+Obrigado!
 </div>
 <div class="b">
 <?php
-$point=$_REQUEST['points'];
-mysqli_query($conn,"INSERT INTO dbms_score (name,score) VALUES('$user_check','$point')");
+$point=$_REQUEST['pontos'];
+mysqli_query($conn,"INSERT INTO os_score (name,score) VALUES('$user_check','$ponto')");
 ?>
-Your Score for Database Management System is  <?php 
-$sql=mysqli_query($conn,"SELECT * FROM dbms_score WHERE name= '$user_check' order by s_no desc");
+Sua pontuação na categoria: Sustentabilidade foi... 
+<?php 
+$sql=mysqli_query($conn,"SELECT * FROM os_score WHERE name= '$user_check' order by s_no desc");
 $result=mysqli_fetch_array($sql,MYSQLI_ASSOC);
 echo $result["score"];
-?> Out of 25.
+?> de 25 perguntas.
 </div>
-<a href="mainpage.php" class="home">
-Go to Home
-</a>
+<a href="mainpage.php" class="home"> Ir para página inicial</a>
 
 </body>
 </html>
