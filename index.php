@@ -40,7 +40,7 @@ $login_user=$row['name'];
 </div> <!-- container h-100 -->
     
 
-    <div class="fixed">
+    <div class="fixed-bottom">
         adsasds
         
     </div>
