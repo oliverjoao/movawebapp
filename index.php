@@ -30,7 +30,7 @@ $login_user=$row['name'];
                 <div class="row">
                     <div class="col-md-12">
                         <a href="quiz_base.php" class="btn btn-outline-primary btn-lg btn-block">Sustentabilidades</a>  
-                        <a href="dbmsquiz.php" class="btn btn-outline-primary btn-lg btn-block">Carnaval no Parque</a>
+                        <a href="carnaparquequiz.php" class="btn btn-outline-primary btn-lg btn-block">Carnaval no Parque</a>
                         <a href="osquiz.php" class="btn btn-outline-primary btn-lg btn-block">BSB tem</a>
                         <a href="dbmsquiz.php" class="btn btn-outline-primary btn-lg btn-block">Artista</a>
                         <a href="osquiz.php" class="btn btn-outline-primary btn-lg btn-block">Aleatório</a>
