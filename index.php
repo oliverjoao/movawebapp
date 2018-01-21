@@ -8,7 +8,7 @@ $login_user=$row['name'];
 <!doctype html>
 <html lang="pt-br">
   <head>
-    <title>Minuto</title> 
+    <title>Quiz no Parque</title> 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="Content-Language" content="pt-br">
@@ -24,16 +24,16 @@ $login_user=$row['name'];
 
         <div class="card">
             <div class="card-head">
-                <h1 class="text-center">Minuto CarnaGame</h1>
+                <h1 class="text-center">Quiz no Parque</h1>
             </div>
           <div class="card-body">
                 <div class="row">
                     <div class="col-md-12">
-                        <a href="quiz_base.php" class="btn btn-outline-primary btn-lg btn-block">Sustentabilidades</a>  
-                        <a href="carnaparquequiz.php" class="btn btn-outline-primary btn-lg btn-block">Carnaval no Parque</a>
-                        <a href="osquiz.php" class="btn btn-outline-primary btn-lg btn-block">BSB tem</a>
-                        <a href="dbmsquiz.php" class="btn btn-outline-primary btn-lg btn-block">Artista</a>
-                        <a href="osquiz.php" class="btn btn-outline-primary btn-lg btn-block">Aleatório</a>
+                        <a href="quiz/artistas_quiz.php" class="btn btn-outline-primary btn-lg btn-block">Artistas</a>
+                        <a href="quiz/bsb_tem_quiz.php" class="btn btn-outline-primary btn-lg btn-block">BSB tem</a>
+                        <a href="quiz/carna_parque_quiz.php" class="btn btn-outline-primary btn-lg btn-block">Carnaval no Parque</a>
+                        <a href="quiz/sustenta_quiz.php" class="btn btn-outline-primary btn-lg btn-block">Sustentabilidades</a>                          
+                        <a href="quiz/#" class="btn btn-outline-primary btn-lg btn-block">Aleatório</a>
                     </div>
                 </div> <!-- row -->
           </div> <!-- card body -->

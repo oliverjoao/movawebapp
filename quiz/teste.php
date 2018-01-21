@@ -14,7 +14,7 @@ header("Location: login1.php");
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <title>Quiz no Parque</title> 
+        <title>Home</title> 
         <meta http-equiv="Content-Language" content="pt-br">
 
         <!-- estilo personalizado -->
