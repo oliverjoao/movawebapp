@@ -8,7 +8,7 @@ $login_user=$row['name'];
 <!doctype html>
 <html lang="pt-br">
   <head>
-    <title>Home</title> 
+    <title>Minuto</title> 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="Content-Language" content="pt-br">
@@ -23,6 +23,9 @@ $login_user=$row['name'];
     <div class="row h-100 justify-content-center align-items-center">
 
         <div class="card">
+            <div class="card-head">
+                <h1 class="text-center">Minuto CarnaGame</h1>
+            </div>
           <div class="card-body">
                 <div class="row">
                     <div class="col-md-12">

@@ -74,56 +74,7 @@ header("Location: login1.php");
 
 
         </script>
-</head>
-<style type="text/css">
-body{
-	background-color: white;
-	background-image: url("gs.png");
-}
-#msform fieldset:not(:first-of-type) {
-	display: none;
-}
-
-fieldset{
-	background-color: white;
-	padding:10px 20px;
-	width:50%;
-	margin-top: 60px;
-	margin-left: 25%;
-	font-size: 20px;
-}
-.previous-action-button,.next-action-button,.submit{
-	background-color: #27AE60;
-	text-align: center;
-	color: white;
-	cursor: pointer;
-	width: 25%;
-	height:35px;
-	border: 0 none;
-	font-size: 20px;
-}
-.next-action-button:hover,.previous-action-button:hover,.submit:hover{
-box-shadow: 0 0 0 2px white;
-color: black
-}
-#a{
-	border: 0 none;
-	padding:10px 15px ;
-	margin-right: 50px;
-}
-
-#quiztime{
-	font-size: 30px;
-	color: white;
-}
-li{
-	list-style-type: none;
-	color: white;
-	float: left;
-}
-
-</style>
-
+	</head>
 <body>
 
 <script type="text/javascript">
