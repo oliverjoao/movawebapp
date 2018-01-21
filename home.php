@@ -15,7 +15,6 @@ $login_user=$row['name'];
             background-image: url("background/4.jpg");
             background-size: 100% 720px;
             background-position: center;
-            background-attachment: fixed;
             background-repeat: no-repeat;
         }
         div.a{
@@ -79,13 +78,10 @@ $login_user=$row['name'];
        
 
         </style>
-        <script  src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="//node_modules/boststrap/compiler/bootstrap.css">
+        <link rel="stylesheet" type="text/css" href="//node_modules/boststrap/compiler/style.css">
     </head>
     <body>
-    	<div class="a">
-    	<h1 >Hello, <em><?php echo $login_user;?></em><a class="hp" href="mainpage.php"><img id="img" src="icon/home-icon2.png" height=50 width=50 style="cursor: pointer;"></a></h1>
-    	<a class="lo" href="logout.php" >Logout</a>
-    	</div>
         <div class="quiz">
     	<a href="osquiz.php" class="os">Sustentabilidade</a>
         <a href="dbmsquiz.php" class="dbms">Carnaval no Parque</a>
@@ -93,6 +89,12 @@ $login_user=$row['name'];
         <a href="dbmsquiz.php" class="dbms">Artista</a>
         <a href="osquiz.php" class="os">Aleatório</a>
         </div>
+
+
+
+    <script src="node_modules/jquery/dist/jquery.js"></script>
+    <script src="node_modules/popper.js/dist/popper.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.js"></script>         
     	
     </body>
 </html>
