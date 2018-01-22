@@ -1,19 +1,20 @@
 /* Imported Font from google fonts */
 
-@import url('https://fonts.googleapis.com/css?family=Fira+Sans:400,600');
+@import url('https://fonts.googleapis.com/css?family=Raleway:900');
 
 body,html{
-    position: relative;
-    height: 100%;
-    background-image: url("assets/img/bg-quiz-no-parque.svg");
-    background-size: cover;
-    background-repeat: repeat;
-    background-color: #ffd00f;
+  font-family: 'Raleway', sans-serif;
+  position: relative;
+  height: 100%;
+  background-image: url("assets/img/bg-quiz-no-parque.svg");
+  background-size: cover;
+  background-repeat: repeat;
+  background-color: #ffd00f;
+  line-height: 1em;
+  font-size: 42px; 
+  font-weight: bolder;
 }
   
-h1{
-  font-weight: 100;
-}
 .card{
   width: 100%;
   margin: 15px;
@@ -24,30 +25,72 @@ h1{
 .btn{
   margin-top: 20px;
   margin-bottom: 20px;
-  padding: 10px;
-  font-size: 1em;
-  text-transform: uppercase;
-  border: none;
-  background-color: #eee;
-  color: #666;
-  box-shadow: 0px 5px 0px 0px #999;
-
+  padding: 20px;
+  color: #fff;
+  background-color: #dd1f6c;
+  border: solid 3px transparent;
+  line-height: 1em;
+  font-size: 36px; 
+  font-weight: 900;
+  border-radius: 3px;
+  position: relative;
+  
 }
 .btn:hover{
-  color: #666;
-  background-color: #ffd00f;
-  box-shadow: 0px 5px 0px 0px #666;
+  color: #999;
+  background-color: #fff;
+  /*top: -5px;*/
+  border: solid 3px #999;
+  box-shadow: 0 8px 30px -20px #333;
 }
 
-#msform fieldset:not(:first-of-type) {
-  display: none;
+/*Botão Verde*/
+.btn-verde{
+  background-color: #bce57d;
+  color: #fff;
+}
+.btn-verde:hover{
+  background-color: #fff;
+  border: solid 3px #bce57d;
+  color: #bce57d;
+}
+.btn-verde:active{
+  background-color: #bce57d;
+  color: #fff;
 }
 
-fieldset{
-  background-color: white;
-  padding:10px 20px;
-  width:50%;
-  margin-top: 60px;
-  margin-left: 25%;
-  font-size: 20px;
+/*Botão Roxo*/
+.btn-roxo{
+  background-color: rgba(91, 36, 117, 1);
+  color: #fff;
 }
+.btn-roxo:hover{
+  background-color: #fff;
+  border: solid 3px rgba(91, 36, 117, 0.9);
+  color: rgba(91, 36, 117, 0.9);
+}
+.btn-roxo:active{
+  background-color: rgba(91, 36, 117, 0.9);
+  color: #fff;
+}
+
+/*Botão Amarelo*/
+.btn-amarelo{
+  background-color: rgba(250, 172, 44, 0.9);
+  color: #fff;
+}
+.btn-amarelo:hover{
+  background-color: #fff;
+  border: solid 3px rgba(250, 172, 44, 0.9);
+  color: rgba(250, 172, 44, 0.9);
+}
+.btn-amarelo:active{
+  background-color: rgba(250, 172, 44, 0.9);
+  color: #fff;
+}
+
+
+
+
+
+

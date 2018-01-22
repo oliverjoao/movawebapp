@@ -26,14 +26,11 @@ header("Location: login1.php");
         <!-- esconde todas as perguntas -->
         <style type="text/css">
         body {background-image: url("assets/img/bg-quiz-no-parque.svg");}
-        #msform fieldset:not(:first-of-type) {display: none;} #quiztime{
-	font-size: 30px;
-	color: #1e1e1e;
-}</style>
+        #msform fieldset:not(:first-of-type) {display: none;} #quiztime{font-size: 30px; color: #1e1e1e;}</style>
     </head>	
 
     <body>
-    	<section class="container">
+<section class="container">
 	<div class="card">
       <div class="card-body">
 		<form action="quizsubmit.php" id="msform" method="get" name="form">

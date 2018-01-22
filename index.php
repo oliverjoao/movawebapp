@@ -30,9 +30,9 @@ $login_user=$row['name'];
           <div class="card-body">
                 <div class="row">
                     <div class="col-md-12">
-                        <a href="quiz/artistas_quiz.php" class="btn btn-block">Artistas</a>
-                        <a href="quiz/bsb_tem_quiz.php" class="btn btn-block">BSB tem</a>
-                        <a href="quiz/carna_parque_quiz.php" class="btn btn-block">Carnaval no Parque</a>
+                        <a href="quiz/artistas_quiz.php" class="btn btn-verde btn-block">Artistas</a>
+                        <a href="quiz/bsb_tem_quiz.php" class="btn btn-roxo btn-block">BSB tem</a>
+                        <a href="quiz/carna_parque_quiz.php" class="btn btn-amarelo btn-block">Carnaval no Parque</a>
                         <a href="quiz/sustenta_quiz.php" class="btn btn btn-block">Sustentabilidades</a>                          
                         <a href="quiz/#" class="btn btn-block">Aleatório</a>
                     </div>
