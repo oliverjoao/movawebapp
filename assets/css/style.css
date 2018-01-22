@@ -34,17 +34,14 @@ p{
 }
 
 
-
-
 .btn{
   margin-top: 20px;
   margin-bottom: 20px;
-  padding: 20px;
+  padding: 30px 0 30px 0 ;
   color: #fff;
   background-color: #dd1f6c;
   border: solid 3px transparent;
   line-height: 1em;
-  font-size: 36px; 
   font-weight: 900;
   border-radius: 3px; 
   position: relative;
