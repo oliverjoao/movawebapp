@@ -26,6 +26,7 @@ $login_user=$row['name'];
         <div class="card">
             <div class="card-head">
                 <h1 class="text-center">Quiz no Parque</h1>
+                <p class="text-center">Escolha o tema da roleta</p>
             </div>
           <div class="card-body">
                 <div class="row">
