@@ -30,17 +30,14 @@ header("Location: login1.php");
     </head>	
 
     <body>
+
+<div id="quiztime"></div>
+
+
 <section class="container">
 	<div class="card">
       <div class="card-body">
 		<form action="quizsubmit.php" id="msform" method="get" name="form">
-
-
-<div id="quiztime"></div>
-
-<form action="quizsubmit.php" id="msform" method="get" name="form" >
-
-
 	<fieldset><h3>1.Quantos dias vai durar o Carnaval No Parque?</h3>
 		<input type="radio" name="q1" value="a">a. 2 <br>
 		<input type="radio" name="q1" value="b">b. 5 <br>
@@ -258,113 +255,130 @@ header("Location: login1.php");
 		<input type="radio" name="q25" value="e">e. na tela da tv no meio desse povo<br><br>
 		<input type="button" name="previous" value="Previous" class="previous-action-button">
 		<input type="button" class="submit" name="submit" value="submit" onclick="score()">
-	</fieldset>
+		</fieldset>
 		</form>
 		</div>
 	</div>
 </section>	
-	<script type="text/javascript">checktime(60,"quiztime");</script>
-	<script src="assets/js/jquery.js"></script>
+
+    <script src="assets/js/jquery.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript">checktime(20,"quiztime");</script>
 
+    <script> // controla botoes de perguntas ( proxima e anterior) 
+    $(document).ready(function(){   
+        $(".next-action-button").click(function()
+        {
+        		current_fs = $(this).parent();
+				next_fs = $(this).parent().next();
 
- <script >
-            $(document).ready(function(){   
-                $(".next-action-button").click(function()
-                {
-                		current_fs = $(this).parent();
-						next_fs = $(this).parent().next();
-	
-						current_fs.animate({opacity: 0}, 
-						{
-							step: function(now) 
-							{
-								scale = 1 - (1 - now) * 0.2;
-								//2. bring next_fs from the right(50%)
-								left = (now * 50)+"%";
-								//3. increase opacity of next_fs to 1 as it moves in
-								opacity = 1 - now;
-								current_fs.css({'transform': 'scale('+scale+')'});
-								next_fs.css({'left': left, 'opacity': opacity});
-							}, 
-							duration: 600, 
-							complete: function()
-							{
-								current_fs.hide();
-								next_fs.show(); 
-							}
-						});
-				});
-
-				$(".previous-action-button").click(function()
+				current_fs.animate({opacity: 0}, 
 				{
-					
-					current_fs = $(this).parent();
-					previous_fs = $(this).parent().prev();
-					
-					current_fs.animate({opacity: 0}, 
+					step: function(now) 
 					{
-						step: function(now) 
-						{
-							scale = 0.8 + (1 - now) * 0.2;
-							//2. take current_fs to the right(50%) - from 0%
-							left = ((1-now) * 50)+"%";
-							//3. increase opacity of previous_fs to 1 as it moves in
-							opacity = 1 - now;
-							current_fs.css({'left': left});
-							previous_fs.css({'transform': 'scale('+scale+')', 'opacity': opacity});
-						}, 
-						duration: 600, 
-						complete: function()
-						{
-							current_fs.hide();
-							previous_fs.show(); 
-						}
-					})
+						scale = 1 - (1 - now) * 0.2;
+						//2. bring next_fs from the right(50%)
+						left = (now * 50)+"%";
+						//3. increase opacity of next_fs to 1 as it moves in
+						opacity = 1 - now;
+						current_fs.css({'transform': 'scale('+scale+')'});
+						next_fs.css({'left': left, 'opacity': opacity});
+					}, 
+					duration: 300	, 
+					complete: function()
+					{
+						current_fs.hide();
+						next_fs.show(); 
+					}
 				});
-					$(".submit").click(function(){
-					return false;
-				})
-				});
+		});
+
+			$(".submit").click(function(){
+			return false;
+		})
+		});
 
 
-        </script>
-<script type="text/javascript">
-function checktime(x,ele)
-{
-	var min=parseInt(x/60);
-	var sec=parseInt(x%60);
-	element=document.getElementById("quiztime");
-	element.innerHTML ="Time left: "+min +" Mins "+ sec + " Secs ";
-	if(x<1)
-	{
-		window.alert("Exam is Finshed!!!");
-		score();
-	}
-	else
-	{
-		x--;
-		setTimeout('checktime('+x+',"'+ele+'")',1000);
-	}
-	
+	</script>
 
-}
-
-function score(){
-	var x=document.forms[0];
-	var pontos=0;
-	for(var i=0;i<x.length;i++)
-	{ 
-		if(x[i].checked)
+        <script type="text/javascript">
+		function checktime(x,ele)
 		{
+			var min=parseInt(x/60);
+			var sec=parseInt(x%60);
+			element=document.getElementById("quiztime");
+			element.innerHTML ="Time left: "+min +" Mins "+ sec + " Secs ";
+			if(x<1)
+			{
+				window.alert("Exam is Finshed!!!");
+				score();
+			}
+			else
+			{
+				x--;
+				setTimeout('checktime('+x+',"'+ele+'")',1000);
+			}
+			
 
-			if(x[i].value=="correct")
-				pontos=pontos+1;
 		}
-	}
-	window.location ="scoreos.php?pontos="+pontos;
-}
 
-</script>
-</body>
+		function score(){
+			var x=document.forms[0];
+			var points=0;
+			for(var i=0;i<x.length;i++)
+			{ 
+				if(x[i].checked)
+				{
+
+					if(x[i].value=="correct")
+						points=points+1;
+				}
+			}
+			window.location ="scoreos.php?points="+points;
+		}
+	</script>
+
+	<script type="text/javascript">  // botao "like" de confirmar
+			
+	var check_status = false;
+	var like_cnt = $("#like-cnt");
+	var like_parent = $(".like-container");
+
+	var burst = new mojs.Burst({
+	  parent: like_parent,
+	  radius:   { 20: 60 },
+	  count: 15,
+	  angle:{0:30},
+	  children: {
+	    delay: 250,
+	    duration: 700,
+	    radius:{10: 0},
+	    fill:   [ '#ddca7e' ],
+	    easing: 		mojs.easing.bezier(.08,.69,.39,.97)
+	  }
+	});
+
+	$("#like-cnt").click(function(){
+	  var t1 = new TimelineLite();
+	  var t2 = new TimelineLite();
+	  if(!check_status){
+	    t1.set(like_cnt, {scale:0});
+	    t1.set('.like-btn', {scale: 0});
+	    t1.to(like_cnt, 0.6, {scale:1, background: '#ddca7e',ease: Expo.easeOut});
+	    t2.to('.like-btn', 0.65, {scale: 1, ease: Elastic.easeOut.config(1, 0.3)}, '+=0.2');
+	//    t1.timeScale(5);
+	    check_status=true;
+	    //circleShape.replay();
+	    burst.replay();
+	  }
+	  else{
+	    t1.to(like_cnt, 1, {scale:1})
+	      .to(like_cnt, 1, {scale:1, background: 'rgba(255,255,255,0.3)', ease: Power4.easeOut});
+	    t1.timeScale(7);
+	    check_status=false;
+	  }
+	  
+	})
+	</script>
+    </body>
 </html>

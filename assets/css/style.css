@@ -48,8 +48,6 @@ body,html{
   color: #fff;
 }
 
-
-
 /*Botão Verde*/
 .btn-verde{
   background-color: rgba(30, 215, 97, 0.8);
@@ -107,7 +105,8 @@ body,html{
 .btn-colorido:hover{
   background-color: #fff;
   border: solid 3px rgba(250, 172, 44, 0.9);
-  color: rgba(250, 172, 44, 0.9);
+  color: #fff;
+
 }
 .btn-colorido:active{
   background-color: rgba(250, 172, 44, 0.9);
