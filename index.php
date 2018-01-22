@@ -26,11 +26,13 @@ $login_user=$row['name'];
         <div class="card">
             <div class="card-head">
                 <h1 class="text-center">Quiz no Parque</h1>
+                <p class="text-center">Ta achando que manja mais que a galera? então bora jogar? <br>BORAAAA BIRIIL!!!</p>
+
             </div>
           <div class="card-body">
                 <div class="row">
                     <div class="col-md-12">
-                        <a href="escolha_tema.php" class="btn btn-verde class='pulse-button' btn-block">Jogar</a>
+                        <a href="escolha_tema.php" class="btn pulse-button">Jogar</a>
                     </div>
                 </div> <!-- row -->
           </div> <!-- card body -->
