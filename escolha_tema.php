@@ -1,9 +1,9 @@
 <?php
-include('connection.php');
-include("check.php");
-$sql = mysqli_query($conn,"SELECT * FROM jogadores WHERE name='$user_check' ");
-$row=mysqli_fetch_array($sql,MYSQLI_ASSOC);
-$login_user=$row['name'];
+//include('connection.php');
+//include("check.php");
+//$sql = mysqli_query($conn,"SELECT * FROM jogadores WHERE name='$user_check' ");
+//$row=mysqli_fetch_array($sql,MYSQLI_ASSOC);
+//$login_user=$row['name'];
 ?>
 <!doctype html>
 <html lang="pt-br">
@@ -32,9 +32,9 @@ $login_user=$row['name'];
                 <div class="row">
                     <div class="col-md-12">
                         <a href="quiz/artistas_quiz.php" class="btn btn-verde up btn-block">Artistas</a>
-                        <a href="quiz/bsb_tem_quiz.php" class="btn btn-roxo btn-block">BSB tem</a>
+                        <a href="quiz/bsb_tem_quiz.php" class="btn btn-roxo btn-block">A BOA da Cidade</a>
                         <a href="quiz/carna_parque_quiz.php" class="btn btn-amarelo btn-block">Carnaval no Parque</a>
-                        <a href="quiz/sustenta_quiz.php" class="btn btn btn-block">Sustentabilidades</a>                          
+                        <a href="quiz/sustenta_quiz.php" class="btn btn btn-block">Coisa Boa Gera Coisa Boa</a>                          
                         <a href="quiz/#" class="btn btn-colorido btn-block">Aleatório</a>
                     </div>
                 </div> <!-- row -->

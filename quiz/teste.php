@@ -1,11 +1,11 @@
 <?php
-include("connection.php");
-session_start();
-$user_check=$_SESSION["name"];
+//include("connection.php");
+//session_start();
+//$user_check=$_SESSION["name"];
  
-if(!isset($user_check))
+//if(!isset($user_check))
 {
-header("Location: login1.php");
+//header("Location: login1.php");
 }
 ?>
 <!doctype html>
