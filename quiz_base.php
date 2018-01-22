@@ -38,7 +38,7 @@ header("Location: login1.php");
 				<input type="radio" name="q1" value="b">b. Dynamic Loading<br>
 				<input type="radio" name="q1" value="correct">c. Dynamic Linking<br>
 				<input type="radio" name="q1" value="d">d. Overlays<br><br>
-				<input type="button" name="next" value="Confirmar" class=" btn btn-outline-primary btn-lg next-action-button fixed-bottom fixed-bottom-item">	
+				<input type="button" name="next" value="Confirmar" class="next-action-button">	
 
 			</fieldset>
 			<fieldset>

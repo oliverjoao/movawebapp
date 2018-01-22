@@ -8,116 +8,42 @@ if(!isset($user_check))
 header("Location: login1.php");
 }
 ?>
-<html>
-<head>
-<title>Carnaval no Parque</title>
-<meta charset="utf-8">
-<script  src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-        <script >
-            $(document).ready(function(){   
-                $(".next-action-button").click(function()
-                {
-                		current_fs = $(this).parent();
-						next_fs = $(this).parent().next();
-	
-						current_fs.animate({opacity: 0}, 
-						{
-							step: function(now) 
-							{
-								scale = 1 - (1 - now) * 0.2;
-								//2. bring next_fs from the right(50%)
-								left = (now * 50)+"%";
-								//3. increase opacity of next_fs to 1 as it moves in
-								opacity = 1 - now;
-								current_fs.css({'transform': 'scale('+scale+')'});
-								next_fs.css({'left': left, 'opacity': opacity});
-							}, 
-							duration: 600, 
-							complete: function()
-							{
-								current_fs.hide();
-								next_fs.show(); 
-							}
-						});
-				});
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>Quiz no Parque</title> 
+        <meta http-equiv="Content-Language" content="pt-br">
 
-				$(".previous-action-button").click(function()
-				{
-					
-					current_fs = $(this).parent();
-					previous_fs = $(this).parent().prev();
-					
-					current_fs.animate({opacity: 0}, 
-					{
-						step: function(now) 
-						{
-							scale = 0.8 + (1 - now) * 0.2;
-							//2. take current_fs to the right(50%) - from 0%
-							left = ((1-now) * 50)+"%";
-							//3. increase opacity of previous_fs to 1 as it moves in
-							opacity = 1 - now;
-							current_fs.css({'left': left});
-							previous_fs.css({'transform': 'scale('+scale+')', 'opacity': opacity});
-						}, 
-						duration: 600, 
-						complete: function()
-						{
-							current_fs.hide();
-							previous_fs.show(); 
-						}
-					})
-				});
-					$(".submit").click(function(){
-					return false;
-				})
-				});
+        <!-- estilo personalizado -->
+        <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
+        <!-- bootstrap -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+
+        <!-- esconde todas as perguntas -->
+        <style type="text/css">
+        body {background-image: url("assets/img/bg-quiz-no-parque.svg");}
+        #msform fieldset:not(:first-of-type) {display: none;} #quiztime{
+	font-size: 30px;
+	color: #1e1e1e;
+}</style>
+    </head>	
+
+    <body>
+    	<section class="container">
+	<div class="card">
+      <div class="card-body">
+		<form action="quizsubmit.php" id="msform" method="get" name="form">
 
 
-        </script>
-	</head>
-<body>
-
-<script type="text/javascript">
-function checktime(x,ele)
-{
-	var min=parseInt(x/60);
-	var sec=parseInt(x%60);
-	element=document.getElementById("quiztime");
-	element.innerHTML ="Time left: "+min +" Mins "+ sec + " Secs ";
-	if(x<1)
-	{
-		window.alert("Exam is Finshed!!!");
-		score();
-	}
-	else
-	{
-		x--;
-		setTimeout('checktime('+x+',"'+ele+'")',1000);
-	}
-	
-
-}
-
-function score(){
-	var x=document.forms[0];
-	var pontos=0;
-	for(var i=0;i<x.length;i++)
-	{ 
-		if(x[i].checked)
-		{
-
-			if(x[i].value=="correct")
-				pontos=pontos+1;
-		}
-	}
-	window.location ="scoreos.php?pontos="+pontos;
-}
-
-</script>
-<div id="a">
 <div id="quiztime"></div>
-<script type="text/javascript">checktime(60,"quiztime");</script>
+
 <form action="quizsubmit.php" id="msform" method="get" name="form" >
+
+
 	<fieldset><h3>1.Quantos dias vai durar o Carnaval No Parque?</h3>
 		<input type="radio" name="q1" value="a">a. 2 <br>
 		<input type="radio" name="q1" value="b">b. 5 <br>
@@ -336,8 +262,112 @@ function score(){
 		<input type="button" name="previous" value="Previous" class="previous-action-button">
 		<input type="button" class="submit" name="submit" value="submit" onclick="score()">
 	</fieldset>
+		</form>
+		</div>
+	</div>
+</section>	
+	<script type="text/javascript">checktime(60,"quiztime");</script>
+	<script src="assets/js/jquery.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 
-<br>
-</form>
+
+ <script >
+            $(document).ready(function(){   
+                $(".next-action-button").click(function()
+                {
+                		current_fs = $(this).parent();
+						next_fs = $(this).parent().next();
+	
+						current_fs.animate({opacity: 0}, 
+						{
+							step: function(now) 
+							{
+								scale = 1 - (1 - now) * 0.2;
+								//2. bring next_fs from the right(50%)
+								left = (now * 50)+"%";
+								//3. increase opacity of next_fs to 1 as it moves in
+								opacity = 1 - now;
+								current_fs.css({'transform': 'scale('+scale+')'});
+								next_fs.css({'left': left, 'opacity': opacity});
+							}, 
+							duration: 600, 
+							complete: function()
+							{
+								current_fs.hide();
+								next_fs.show(); 
+							}
+						});
+				});
+
+				$(".previous-action-button").click(function()
+				{
+					
+					current_fs = $(this).parent();
+					previous_fs = $(this).parent().prev();
+					
+					current_fs.animate({opacity: 0}, 
+					{
+						step: function(now) 
+						{
+							scale = 0.8 + (1 - now) * 0.2;
+							//2. take current_fs to the right(50%) - from 0%
+							left = ((1-now) * 50)+"%";
+							//3. increase opacity of previous_fs to 1 as it moves in
+							opacity = 1 - now;
+							current_fs.css({'left': left});
+							previous_fs.css({'transform': 'scale('+scale+')', 'opacity': opacity});
+						}, 
+						duration: 600, 
+						complete: function()
+						{
+							current_fs.hide();
+							previous_fs.show(); 
+						}
+					})
+				});
+					$(".submit").click(function(){
+					return false;
+				})
+				});
+
+
+        </script>
+<script type="text/javascript">
+function checktime(x,ele)
+{
+	var min=parseInt(x/60);
+	var sec=parseInt(x%60);
+	element=document.getElementById("quiztime");
+	element.innerHTML ="Time left: "+min +" Mins "+ sec + " Secs ";
+	if(x<1)
+	{
+		window.alert("Exam is Finshed!!!");
+		score();
+	}
+	else
+	{
+		x--;
+		setTimeout('checktime('+x+',"'+ele+'")',1000);
+	}
+	
+
+}
+
+function score(){
+	var x=document.forms[0];
+	var pontos=0;
+	for(var i=0;i<x.length;i++)
+	{ 
+		if(x[i].checked)
+		{
+
+			if(x[i].value=="correct")
+				pontos=pontos+1;
+		}
+	}
+	window.location ="scoreos.php?pontos="+pontos;
+}
+
+</script>
 </body>
 </html>

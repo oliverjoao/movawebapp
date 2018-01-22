@@ -14,10 +14,11 @@ $login_user=$row['name'];
     <meta http-equiv="Content-Language" content="pt-br">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <style type="text/css">
+        body {background-image: url("assets/img/bg-quiz-no-parque.svg");}
+    </style>
     </head>
     <body>
-
-
 
 <div class="container h-100">
     <div class="row h-100 justify-content-center align-items-center">
@@ -29,11 +30,11 @@ $login_user=$row['name'];
           <div class="card-body">
                 <div class="row">
                     <div class="col-md-12">
-                        <a href="quiz/artistas_quiz.php" class="btn btn-outline-primary btn-lg btn-block">Artistas</a>
-                        <a href="quiz/bsb_tem_quiz.php" class="btn btn-outline-primary btn-lg btn-block">BSB tem</a>
-                        <a href="quiz/carna_parque_quiz.php" class="btn btn-outline-primary btn-lg btn-block">Carnaval no Parque</a>
-                        <a href="quiz/sustenta_quiz.php" class="btn btn-outline-primary btn-lg btn-block">Sustentabilidades</a>                          
-                        <a href="quiz/#" class="btn btn-outline-primary btn-lg btn-block">Aleatório</a>
+                        <a href="quiz/artistas_quiz.php" class="btn btn-block">Artistas</a>
+                        <a href="quiz/bsb_tem_quiz.php" class="btn btn-block">BSB tem</a>
+                        <a href="quiz/carna_parque_quiz.php" class="btn btn-block">Carnaval no Parque</a>
+                        <a href="quiz/sustenta_quiz.php" class="btn btn btn-block">Sustentabilidades</a>                          
+                        <a href="quiz/#" class="btn btn-block">Aleatório</a>
                     </div>
                 </div> <!-- row -->
           </div> <!-- card body -->
@@ -42,11 +43,6 @@ $login_user=$row['name'];
     </div> <!-- row h-100 justify-content-center align-items-center -->
 </div> <!-- container h-100 -->
     
-
-    <div class="fixed-bottom">
-        adsasds
-        
-    </div>
 
     <script src="assets/js/jquery.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
