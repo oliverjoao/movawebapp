@@ -30,9 +30,7 @@ $login_user=$row['name'];
           <div class="card-body">
                 <div class="row">
                     <div class="col-md-12">
-                        <div class="bola">
-                        <a href="escolha_tema.php" class="btn btn-verde up btn-block">Jogar</a>
-                        </div>
+                        <a href="escolha_tema.php" class="btn btn-verde class='pulse-button' btn-block">Jogar</a>
                     </div>
                 </div> <!-- row -->
           </div> <!-- card body -->
