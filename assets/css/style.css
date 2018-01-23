@@ -54,11 +54,6 @@ p{
   box-shadow: 0 8px 30px -20px #333;
 }
 
-.btn:active{
-  background-color: #dd1f6c;
-  color: #fff;
-}
-
 /*Botão Verde*/
 .btn-verde{
   background-color: rgba(30, 215, 97, 0.8);
@@ -68,10 +63,6 @@ p{
   background-color: #fff;
   border: solid 3px rgba(30, 215, 97, 0.8);
   color: rgba(30, 215, 97, 0.8);
-}
-.btn-verde:active{
-  background-color: rgba(30, 215, 97, 0.8);
-  color: #fff;
 }
 
 /*Botão Roxo*/
@@ -84,10 +75,6 @@ p{
   border: solid 3px rgba(91, 36, 117, 0.9);
   color: rgba(91, 36, 117, 0.9);
 }
-.btn-roxo:active{
-  background-color: rgba(91, 36, 117, 0.9);
-  color: #fff;
-}
 
 /*Botão Amarelo*/
 .btn-amarelo{
@@ -98,10 +85,6 @@ p{
   background-color: #fff;
   border: solid 3px rgba(250, 172, 44, 0.9);
   color: rgba(250, 172, 44, 0.9);
-}
-.btn-amarelo:active{
-  background-color: rgba(250, 172, 44, 0.9);
-  color: #fff;
 }
 
 /*Botão Colorido*/
@@ -118,10 +101,6 @@ p{
   border: solid 3px rgba(250, 172, 44, 0.9);
   color: #fff;
 
-}
-.btn-colorido:active{
-  background-color: rgba(250, 172, 44, 0.9);
-  color: #fff;
 }
 
 
